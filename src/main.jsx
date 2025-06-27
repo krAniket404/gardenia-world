@@ -5,9 +5,11 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
