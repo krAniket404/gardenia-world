@@ -25,7 +25,7 @@ const activities = [
 const Activities = () => {
   return (
     <>
-      <div className="pt-50 pb-30 w-full min-h-3xl bg-blue-primary/10 flex justify-center items-center flex-col gap-4 mb-16">
+      <div className="pt-50 pb-30 w-full min-h-3xl bg-blue-primary/10 flex justify-center items-center flex-col gap-4 mb-16 px-4 md:px-8 lg:px-0">
         <h1 className="text-4xl font-bold font-gray">Our Activities</h1>
         <p className="md:max-w-3/5 text-center">
           Gardenia World School provides a wide range of activities that foster
