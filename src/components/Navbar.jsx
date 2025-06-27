@@ -10,7 +10,7 @@ const links = [
   { name: 'About us', path: '/about' },
   { name: 'Activities', path: '/activities' },
   { name: 'Gallery', path: '/gallery' },
-  { name: 'Contact us', path: '/contact' },
+  { name: 'Contact us', path: 'https://wa.me/+916200814842' },
 ];
 
 const Navbar = () => {

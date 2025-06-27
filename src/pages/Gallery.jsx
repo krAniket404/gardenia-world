@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { MinusCircleOutlined } from '@ant-design/icons';
 
 const IMAGES = [
   {
@@ -61,7 +62,7 @@ const Gallery = () => {
   return (
     <>
       <main className="container mx-auto px-10 md:px-0 flex gap-20 flex-col mt-40 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {IMAGES.map((image) => (
             <div key={image.id} className="w-full h-auto">
               <img
@@ -93,7 +94,9 @@ const Gallery = () => {
                 className="absolute top-[-50px] right-0 md:right-[-50px] p-2 font-bold text-white text-2xl bg-red-500 rounded-full"
                 onClick={() => setSelectedImage(null)}
               >
-                <div className="w-6 h-6">X</div>
+                <div className="w-6 h-6 flex justify-center items-center">
+                  <MinusCircleOutlined />
+                </div>
               </button>
               <img
                 src={selectedImage.src}

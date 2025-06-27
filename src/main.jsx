@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Activities from './pages/Activities.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/activities" element={<Activities />} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Route>
     </Routes>
