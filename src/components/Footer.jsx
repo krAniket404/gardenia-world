@@ -7,6 +7,7 @@ import {
   YoutubeOutlined,
 } from '@ant-design/icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const footerHeading = {
   fontSize: '1.75rem',
@@ -95,12 +96,12 @@ const Footer = () => {
             <ul className="list-none flex flex-col gap-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="inline-block transition-colors after:content-[''] after:block after:h-[1px] after:bg-white after:transition-all after:w-full after:scale-x-0 hover:after:scale-x-100"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
