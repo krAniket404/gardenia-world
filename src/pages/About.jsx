@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import '../app.css';
+import '../App.css';
 
 const intro = [
   {
@@ -17,6 +17,9 @@ const intro = [
     title: 'Our Dedicated Team',
     description:
       'Our teachers are kind, helpful, and dedicated to providing quality education. They teach various subjects like Maths, Science, and English, ensuring that our students receive a well-rounded education. Our staff is cooperative and caring, making sure every student feels comfortable and supported.',
+  },
+  {
+    title: '',
   },
 ];
 
