@@ -70,16 +70,16 @@ const Footer = () => {
               Office
             </p>
             <p className="text-sm">
-              PACE tower, opposite Jyoti Raj complex, Near Metro Pillar No. 31,
-              90 feet Road, Kankarbagh, Patna. 800020
+              PACE Tower, Near Metro Pillar No 31, 90 feet road, Kankarbagh,
+              Patna-800020
             </p>
             <p className="text-xl">
               <CaretRightOutlined />
               Campus
             </p>
             <p className="text-sm">
-              Tarari Campus, 400m west of Tarari Post Office on Garath Road
-              Tarari, Bhojpur
+              400 meter West from Tarari post office, on karath Road, Tarari,
+              Bhojpur
             </p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.829626003572!2d84.4126679!3d25.208967500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d73f96b6176b7%3A0x2205813af9f35c2c!2sGardenia!5e0!3m2!1sen!2sin!4v1748794973531!5m2!1sen!2sin"
