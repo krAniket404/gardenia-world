@@ -65,7 +65,7 @@ const Navbar = () => {
                   to={link.path}
                   className={`flex flex-col h-6 overflow-hidden group ${
                     location.pathname === link.path
-                      ? 'text-blue-primary font-semibold'
+                      ? 'text-green-primary font-semibold'
                       : ''
                   }`}
                 >
