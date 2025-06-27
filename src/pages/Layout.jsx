@@ -10,7 +10,6 @@ export default function Layout() {
       <Navbar />
 
       {/* Main Content */}
-      <div className="mt-30 md:mt-0"></div>
       <Outlet />
 
       {/* Footer */}
