@@ -1,12 +1,10 @@
 import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import heroImage from './assets/hero-image.png';
-import pattern from './assets/pattern.jpg';
-import Button from './components/Button';
+import '../App.css';
+import heroImage from '../assets/hero-image.png';
+import pattern from '../assets/pattern.jpg';
+import Button from '../components/Button';
 import { UsergroupAddOutlined, YoutubeOutlined } from '@ant-design/icons';
-import Footer from './components/Footer';
-import CountBox from './components/CountBox';
+import CountBox from '../components/CountBox';
 
 const counts = [
   { label: 'Students', value: 500, color: 'blue-primary' },
@@ -66,11 +64,10 @@ const specials = [
   },
 ];
 
-function App() {
+function Home() {
   return (
     <>
-      <Navbar />
-      <div className="mt-30 lg:mt-0 lg:h-[80vh] xl:h-screen flex flex-col lg:flex-row items-center lg:justify-center container mx-auto gap-8 px-4 lg:px-8 xl:px-0">
+      <div className="lg:mt-0 lg:h-[80vh] xl:h-screen flex flex-col lg:flex-row items-center lg:justify-center container mx-auto gap-8 px-4 lg:px-8 xl:px-0">
         <div className="flex flex-col gap-8 lg:flex-1 relative items-center text-center lg:text-left lg:items-start">
           <img
             src={pattern}
@@ -121,10 +118,11 @@ function App() {
         <h2 className="text-4xl font-bold text-center">
           Why choose Gardenia World School?
         </h2>
-        <p className="text-center md:text-lg xl:text-xl mt-8 mb-16 px-4 lg:px-8">
-          We provide a nurturing environment where children can grow
-          academically, socially, and emotionally to become confident
-          individuals.
+        <p className="text-center mt-8 mb-16 px-4 lg:w-3/5 mx-auto">
+          At Gardenia World School, we believe that education is not just about
+          academics, but about developing social skills, discipline, and values.
+          Our school prepares students to face the challenges of the world and
+          life, while celebrating diversity and promoting inclusivity.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 px-4 lg:px-8 xl:px-0 container mx-auto">
           {specials.map((special, index) => (
@@ -140,9 +138,8 @@ function App() {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 }
 
-export default App;
+export default Home;

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import logo from '../assets/logo.png';
 import { CloseCircleOutlined } from '@ant-design/icons';
+
+import { useLocation, Link } from 'react-router-dom';
 
 const links = [
   { name: 'Home', path: '/' },
@@ -13,9 +15,14 @@ const links = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   return (
     <>
       <div
@@ -32,12 +39,14 @@ const Navbar = () => {
         <ul className="list-decimal flex flex-col gap-4 group">
           {links.map((link) => (
             <li key={link.name} className="text-4xl font-bold uppercase">
-              <a
-                href={link.path}
-                className="block py-2 px-4 group-hover:not-hover:text-white/60 hover:tracking-wider transition-all transition-500"
+              <Link
+                to={link.path}
+                className={`block py-2 px-4 group-hover:not-hover:text-white/60 hover:tracking-wider transition-all transition-500 ${
+                  location.pathname === link.path ? 'line-through' : ''
+                }`}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -45,22 +54,26 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 right-0 z-40 border-b-2 border-dotted bg-white p-4">
         <div className="flex justify-between items-center container mx-auto">
           <div className="flex items-center gap-2">
-            <a href="/">
+            <Link to="/">
               <img src={logo} alt="logo" className="object-cover w-32" />
-            </a>
+            </Link>
           </div>
           <ul className="hidden md:flex items-center gap-6 list-none">
             {links.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.path}
-                  className="flex flex-col h-6 overflow-hidden group"
+                <Link
+                  to={link.path}
+                  className={`flex flex-col h-6 overflow-hidden group ${
+                    location.pathname === link.path
+                      ? 'text-blue-primary font-semibold'
+                      : ''
+                  }`}
                 >
                   <ul className="list-none group-hover:translate-y-[-50%] transition-transform duration-500 ease-[cubic-bezier(.21,.13,.16,1.43)]">
                     <li>{link.name}</li>
                     <li>{link.name}</li>
                   </ul>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
