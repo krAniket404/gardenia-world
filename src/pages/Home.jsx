@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import heroImage from '../assets/hero-image.png';
+import heroImage from '../assets/hero-img.jpeg';
 import pattern from '../assets/pattern.jpg';
 import Button from '../components/Button';
 import { UsergroupAddOutlined, YoutubeOutlined } from '@ant-design/icons';
@@ -67,7 +67,7 @@ const specials = [
 function Home() {
   return (
     <>
-      <div className="mt-30 lg:mt-0 lg:h-[80vh] xl:h-screen flex flex-col lg:flex-row items-center lg:justify-center container mx-auto gap-8 px-4 lg:px-8 xl:px-0">
+      <div className="relative mt-30 lg:mt-0 lg:h-[80vh] xl:h-screen flex flex-col lg:flex-row items-center lg:justify-center container mx-auto gap-8 px-4 lg:px-8 xl:px-0">
         <div className="flex flex-col gap-8 lg:flex-1 relative items-center text-center lg:text-left lg:items-start">
           <img
             src={pattern}
@@ -80,8 +80,8 @@ function Home() {
           </h1>
           <p className="md:text-lg xl:text-xl">
             At Gardenia World School, we provide quality education for students
-            from Class 1 to 5, fostering academic excellence and holistic
-            development in a nurturing environment.
+            upto Class 5, fostering academic excellence and holistic development
+            in a nurturing environment.
           </p>
           <div className="flex gap-4 flex-col sm:flex-row">
             <Button variant="primary" icon={<UsergroupAddOutlined />}>
@@ -100,6 +100,13 @@ function Home() {
               Explore on YouTube
             </Button>
           </div>
+          <div className="lg:hidden w-full py-2">
+            <marquee direction="reverse" className="italic text-lg">
+              <span className="text-red-500 font-bold">Notice:</span> Within
+              next 5 years students will pass CBSE class 10 from Gardenia World
+              School.
+            </marquee>
+          </div>
         </div>
         <div className="md:flex-1">
           <img
@@ -107,6 +114,12 @@ function Home() {
             alt="hero"
             className="w-full h-full object-cover"
           />
+        </div>
+        <div className="hidden lg:block absolute w-4/5 left-1/10 bottom-25 py-2 border-y border-dashed">
+          <marquee direction="reverse" className="italic text-lg">
+            <span className="text-red-500 font-bold">Notice:</span> Within next
+            5 years students will pass CBSE class 10 from Gardenia World School.
+          </marquee>
         </div>
       </div>
       <div className="relative mt-5 md:-mt-10 lg:-mt-20 grid grid-cols-2 md:grid-cols-3 w-3/4 lg:w-4/5 xl:w-1/2 mx-auto rounded-t-lg overflow-hidden">
