@@ -19,7 +19,7 @@ const listItems = [
     icon: <WhatsAppOutlined />,
     title: 'Whatsapp',
     content: '6200814842',
-    path: 'https://wa.me/6200814842',
+    path: 'https://wa.me/+916200814842',
   },
   {
     icon: <AimOutlined />,
