@@ -123,9 +123,9 @@ function Home() {
         </div>
       </div>
       <div className="relative mt-5 md:-mt-10 lg:-mt-20 grid grid-cols-2 md:grid-cols-3 w-3/4 lg:w-4/5 xl:w-1/2 mx-auto rounded-t-lg overflow-hidden">
-        <CountBox count={500} label="Teachers" bg="bg-blue-primary" />
-        <CountBox count={50} label="Students" bg="bg-green-primary" />
-        <CountBox count={20} label="Classes" bg="bg-black" last="true" />
+        <CountBox count={20} label="Teachers" bg="bg-blue-primary" />
+        <CountBox count={250} label="Students" bg="bg-green-primary" />
+        <CountBox count={10} label="Classes" bg="bg-black" last="true" />
       </div>
       <div className="mt-20 bg-gray-50 py-16">
         <h2 className="text-4xl font-bold text-center">
