@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
