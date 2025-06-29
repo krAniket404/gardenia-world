@@ -61,7 +61,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <div className="bg-[url('./assets/footer-bg.jpg')] bg-cover z-0 bg-center after:-z-10 after:absolute relative after:top-0 after:left-0 after:h-full after:w-full after:bg-gray/80 text-white p-12 sm:p-16">
+    <div className="mt-20 bg-[url('./assets/footer-bg.jpg')] bg-cover z-0 bg-center after:-z-10 after:absolute relative after:top-0 after:left-0 after:h-full after:w-full after:bg-gray/80 text-white p-12 sm:p-16">
       <div className="container mx-auto mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-20">
           <div className="flex flex-col gap-4">

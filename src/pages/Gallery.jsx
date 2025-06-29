@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { MinusCircleOutlined } from '@ant-design/icons';
+import { CloseOutlined } from '@ant-design/icons';
 
 const IMAGES = [
   {
@@ -95,7 +95,7 @@ const Gallery = () => {
                 onClick={() => setSelectedImage(null)}
               >
                 <div className="w-6 h-6 flex justify-center items-center">
-                  <MinusCircleOutlined />
+                  <CloseOutlined />
                 </div>
               </button>
               <img

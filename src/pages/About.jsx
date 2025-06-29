@@ -6,7 +6,7 @@ const intro = [
   {
     title: 'Welcome to Gardenia World School',
     description: [
-      'At Gardenia World School, we believe that education is not just about academics, but about holistic development. Our school is a place where students from Class 1 to 5 learn, grow, and thrive in a nurturing environment.',
+      'At Gardenia World School, we believe that education is not just about academics, but about holistic development. Our school is a place where students upto class 5 learn, grow, and thrive in a nurturing environment.',
       'Nestled in a nurturing environment, Gardenia World School is a beacon of holistic education, dedicated to shaping young minds and fostering a love for learning. Our school is more than just a place of education; it is a vibrant community where students, teachers, and parents work together to create a bright future.',
     ],
   },
