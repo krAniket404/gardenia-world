@@ -46,7 +46,7 @@ const Contact = () => {
     e.preventDefault();
     const phoneNumber = '7481960204';
     const wpMessage = `Name: ${name}.
-    Message: ${message}`;
+Message: ${message}`;
     const encodedMessage = encodeURIComponent(wpMessage);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, '_blank');
@@ -89,7 +89,7 @@ const Contact = () => {
             ))}
           </ul>
         </div>
-        <div className="flex justify-center items-center px-4 py-8 md:px-6 lg:px-8 flex-1">
+        <div className="flex justify-center items-center py-8 md:px-6 lg:px-8 flex-1">
           <div className="flex flex-col gap-8 w-4/5">
             <h3 className="text-2xl font-semibold">Drop a message</h3>
             <form onSubmit={handleSubmit}>
