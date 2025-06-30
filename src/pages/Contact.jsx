@@ -44,7 +44,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = '7481960204';
+    const phoneNumber = '6200814842';
     const wpMessage = `Name: ${name}.
 Message: ${message}`;
     const encodedMessage = encodeURIComponent(wpMessage);
