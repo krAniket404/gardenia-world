@@ -42,24 +42,37 @@ const listItems = [
 
 const Contact = () => {
   const [name, setName] = useState("");
+  const [nameError, setNameError] = useState(false);
   const [message, setMessage] = useState("");
+  const [messageError, setMessageError] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.trim() === "") {
-      toast.error("Name can not be empty!");
-    } else if (message.trim() === "") {
-      toast.error("Email can not be empty!");
-    } else {
-      const phoneNumber = "6200814842";
-      const wpMessage = `Name: ${name}.
-Message: ${message}`;
-      const encodedMessage = encodeURIComponent(wpMessage);
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      window.open(whatsappURL, "_blank");
-      setName("");
-      setMessage("");
-      toast.success("Message sent successfully!");
+    if (name.trim() === "" || message.trim() === "") {
+      toast.error("The following fields can not be empty!");
+      if (name.trim() === "") {
+        setNameError(true);
+      } else {
+        setNameError(false);
+      }
+      if (message.trim() === "") {
+        setMessageError(true);
+      } else {
+        setMessageError(false);
+      }
+      return;
     }
+
+    const phoneNumber = "6200814842";
+    const wpMessage = `Name: ${name}.
+Message: ${message}`;
+    const encodedMessage = encodeURIComponent(wpMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+    setName("");
+    setMessage("");
+    setNameError(false);
+    setMessageError(false);
+    toast.success("Message sent successfully!");
   };
 
   return (
@@ -102,10 +115,15 @@ Message: ${message}`;
             <h3 className="text-2xl font-semibold">Drop a message</h3>
             <form onSubmit={handleSubmit}>
               <div className="input-field">
-                <label htmlFor="name">Name:</label>
+                <label
+                  htmlFor="name"
+                  className={`${nameError ? "text-red-500" : ""}`}
+                >
+                  Name:
+                </label>
                 <input
                   type="text"
-                  className="input"
+                  className={`input ${nameError ? "invalid" : ""}`}
                   placeholder="Enter your name:"
                   id="name"
                   value={name}
@@ -113,12 +131,17 @@ Message: ${message}`;
                 />
               </div>
               <div className="input-field">
-                <label htmlFor="message">Message:</label>
+                <label
+                  htmlFor="message"
+                  className={`${nameError ? "text-red-500" : ""}`}
+                >
+                  Message:
+                </label>
                 <textarea
                   name="message"
                   id="message"
                   rows="8"
-                  className="input"
+                  className={`input ${nameError ? "invalid" : ""}`}
                   placeholder="Drop your message here:"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
