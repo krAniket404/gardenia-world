@@ -5,56 +5,56 @@ import {
   PhoneOutlined,
   WhatsAppOutlined,
   YoutubeOutlined,
-} from '@ant-design/icons';
-import React from 'react';
-import { Link } from 'react-router-dom';
+} from "@ant-design/icons";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const footerHeading = {
-  fontSize: '1.75rem',
-  fontWeight: 'bold',
-  textTransform: 'uppercase',
-  textDecoration: 'underline',
-  textDecorationColor: 'white',
-  textUnderlineOffset: '0.4em',
-  textDecorationThickness: '0.1em',
-  marginBottom: '1rem',
+  fontSize: "1.75rem",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  textDecoration: "underline",
+  textDecorationColor: "white",
+  textUnderlineOffset: "0.4em",
+  textDecorationThickness: "0.1em",
+  marginBottom: "1rem",
 };
 
 const quickLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Activities', path: '/activities' },
-  { name: 'Gallery', path: '/gallery' },
-  { name: 'Contact Us', path: '/contact' },
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Activities", path: "/activities" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 const contactLinks = [
   {
-    name: '6200814842',
-    path: 'tel:+916200814842',
+    name: "6200814842",
+    path: "tel:+916200814842",
     icon: <PhoneOutlined />,
   },
   {
-    name: '6200814842',
-    path: 'https://wa.me/+916200814842',
+    name: "6200814842",
+    path: "https://wa.me/+916200814842",
     icon: <WhatsAppOutlined />,
   },
 ];
 
 const socialLinks = [
   {
-    name: 'Facebook',
-    path: 'https://www.facebook.com/share/1EhgJBE3Le/',
+    name: "Facebook",
+    path: "https://www.facebook.com/share/1EhgJBE3Le/",
     icon: <FacebookOutlined />,
   },
   {
-    name: 'YouTube',
-    path: 'https://www.youtube.com/@Gardenia_World_School',
+    name: "YouTube",
+    path: "https://www.youtube.com/@Gardenia_World_School",
     icon: <YoutubeOutlined />,
   },
   {
-    name: 'Instagram',
-    path: 'https://www.instagram.com/gardenia_world_school?utm_source=qr&igsh=MmFsd29iem9kODQ4',
+    name: "Instagram",
+    path: "https://www.instagram.com/gardenia_world_school?utm_source=qr&igsh=MmFsd29iem9kODQ4",
     icon: <InstagramOutlined />,
   },
 ];
@@ -139,7 +139,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center items-center border-t border-white/20 pt-4">
-        Copyright © 2025 Gardenia World School. All rights reserved.
+        Copyright © 2025-28 Gardenia World School. All rights reserved.
       </div>
     </div>
   );

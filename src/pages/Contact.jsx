@@ -3,55 +3,63 @@ import {
   PhoneOutlined,
   SendOutlined,
   WhatsAppOutlined,
-} from '@ant-design/icons';
-import React, { useState } from 'react';
+} from "@ant-design/icons";
+import React, { useState } from "react";
 
-import Button from '../components/Button';
+import Button from "../components/Button";
+import toast from "react-hot-toast";
 
 const listItems = [
   {
     icon: <PhoneOutlined />,
-    title: 'Phone',
-    content: '6200814842',
-    path: 'tel:+916200814842',
+    title: "Phone",
+    content: "6200814842",
+    path: "tel:+916200814842",
   },
   {
     icon: <WhatsAppOutlined />,
-    title: 'Whatsapp',
-    content: '6200814842',
-    path: 'https://wa.me/+916200814842',
+    title: "Whatsapp",
+    content: "6200814842",
+    path: "https://wa.me/+916200814842",
   },
   {
     icon: <AimOutlined />,
-    title: 'Location',
+    title: "Location",
     content: [
       {
-        title: 'Office:',
-        text: 'PACE Tower, Near Metro Pillar No 31, 90 feet road, Kankarbagh, Patna-800020',
-        map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14394.130711601798!2d85.157266!3d25.58721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf97f67e31741abb0!2sPACE%20Institute%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1628132403903!5m2!1sen!2sin',
+        title: "Office:",
+        text: "PACE Tower, Near Metro Pillar No 31, 90 feet road, Kankarbagh, Patna-800020",
+        map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14394.130711601798!2d85.157266!3d25.58721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf97f67e31741abb0!2sPACE%20Institute%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1628132403903!5m2!1sen!2sin",
       },
       {
-        title: 'Campus:',
-        text: '400 meter West from Tarari post office, on karath Road, Tarari, Bhojpur',
-        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.829626003572!2d84.4126679!3d25.208967500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d73f96b6176b7%3A0x2205813af9f35c2c!2sGardenia!5e0!3m2!1sen!2sin!4v1748794973531!5m2!1sen!2sin',
+        title: "Campus:",
+        text: "400 meter West from Tarari post office, on karath Road, Tarari, Bhojpur",
+        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.829626003572!2d84.4126679!3d25.208967500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d73f96b6176b7%3A0x2205813af9f35c2c!2sGardenia!5e0!3m2!1sen!2sin!4v1748794973531!5m2!1sen!2sin",
       },
     ],
   },
 ];
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = '6200814842';
-    const wpMessage = `Name: ${name}.
+    if (name.trim() === "") {
+      toast.error("Name can not be empty!");
+    } else if (message.trim() === "") {
+      toast.error("Email can not be empty!");
+    } else {
+      const phoneNumber = "6200814842";
+      const wpMessage = `Name: ${name}.
 Message: ${message}`;
-    const encodedMessage = encodeURIComponent(wpMessage);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappURL, '_blank');
-    setName('');
-    setMessage('');
+      const encodedMessage = encodeURIComponent(wpMessage);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(whatsappURL, "_blank");
+      setName("");
+      setMessage("");
+      toast.success("Message sent successfully!");
+    }
   };
 
   return (
