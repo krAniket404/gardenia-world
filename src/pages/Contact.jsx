@@ -133,7 +133,7 @@ Message: ${message}`;
               <div className="input-field">
                 <label
                   htmlFor="message"
-                  className={`${nameError ? "text-red-500" : ""}`}
+                  className={`${messageError ? "text-red-500" : ""}`}
                 >
                   Message:
                 </label>
@@ -141,7 +141,7 @@ Message: ${message}`;
                   name="message"
                   id="message"
                   rows="8"
-                  className={`input ${nameError ? "invalid" : ""}`}
+                  className={`input ${messageError ? "invalid" : ""}`}
                   placeholder="Drop your message here:"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
