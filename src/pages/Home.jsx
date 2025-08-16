@@ -1,66 +1,66 @@
-import React from 'react';
-import '../App.css';
-import heroImage from '../assets/hero-img.jpeg';
-import pattern from '../assets/pattern.jpg';
-import Button from '../components/Button';
-import { UsergroupAddOutlined, YoutubeOutlined } from '@ant-design/icons';
-import CountBox from '../components/CountBox';
+import React from "react";
+import "../App.css";
+import heroImage from "../assets/hero-img.jpeg";
+import pattern from "../assets/pattern.jpg";
+import Button from "../components/Button";
+import { UsergroupAddOutlined, YoutubeOutlined } from "@ant-design/icons";
+import CountBox from "../components/CountBox";
 
 const counts = [
-  { label: 'Students', value: 500, color: 'blue-primary' },
-  { label: 'Teachers', value: 50, color: 'green-primary' },
-  { label: 'Classes', value: 20, color: 'black' },
+  { label: "Students", value: 500, color: "blue-primary" },
+  { label: "Teachers", value: 50, color: "green-primary" },
+  { label: "Classes", value: 20, color: "black" },
 ];
 
 const specials = [
   {
-    title: 'Real-World Learning Opportunities',
+    title: "Real-World Learning Opportunities",
     description:
-      'Gardenia World School is incorporating real-world learning opportunities into its regular board curriculum. This approach enables students to connect with the real world and develop practical skills through field trips, constructions, cognitive celebrations, exhibitions, and more.',
-    color: 'text-blue-primary',
-    borderColor: 'before:bg-blue-primary',
+      "Gardenia World School is incorporating real-world learning opportunities into its regular board curriculum. This approach enables students to connect with the real world and develop practical skills through field trips, constructions, cognitive celebrations, exhibitions, and more.",
+    color: "text-blue-primary",
+    borderColor: "before:bg-blue-primary",
   },
   {
-    title: 'Montessori-Powered Education',
+    title: "Montessori-Powered Education",
     description:
-      'The school follows the Montessori method, which focuses on individualized learning, hands-on activities, and collaborative play. This approach encourages children to learn at their own pace, fostering independence, creativity, and critical thinking.',
-    color: 'text-green-primary',
-    borderColor: 'before:bg-green-primary',
+      "The school follows the Montessori method, which focuses on individualized learning, hands-on activities, and collaborative play. This approach encourages children to learn at their own pace, fostering independence, creativity, and critical thinking.",
+    color: "text-green-primary",
+    borderColor: "before:bg-green-primary",
   },
   {
-    title: 'Holistic Development',
+    title: "Holistic Development",
     description:
-      'Gardenia World School prioritizes holistic development, offering a range of activities that cater to different interests and talents. Students can participate in sports, games, and extracurricular activities that promote physical, emotional, and social growth.',
-    color: 'text-black',
-    borderColor: 'before:bg-black',
+      "Gardenia World School prioritizes holistic development, offering a range of activities that cater to different interests and talents. Students can participate in sports, games, and extracurricular activities that promote physical, emotional, and social growth.",
+    color: "text-black",
+    borderColor: "before:bg-black",
   },
   {
-    title: 'Support for Individual Learning Pace',
+    title: "Support for Individual Learning Pace",
     description:
-      'The school recognizes that every child learns differently and at their own pace. Gardenia World School provides a supportive environment that accommodates different learning styles, ensuring that each student can reach their full potential.',
-    color: 'text-red-500',
-    borderColor: 'before:bg-red-500',
+      "The school recognizes that every child learns differently and at their own pace. Gardenia World School provides a supportive environment that accommodates different learning styles, ensuring that each student can reach their full potential.",
+    color: "text-red-500",
+    borderColor: "before:bg-red-500",
   },
   {
-    title: 'Intrinsic Happiness through Joy of Learning',
+    title: "Intrinsic Happiness through Joy of Learning",
     description:
-      'The school aims to make learning a joyful experience, promoting intrinsic happiness and motivation among students. By removing academic year restrictions, Gardenia World School allows students to engage with learning materials seamlessly.',
-    color: 'text-yellow-500',
-    borderColor: 'before:bg-yellow-500',
+      "The school aims to make learning a joyful experience, promoting intrinsic happiness and motivation among students. By removing academic year restrictions, Gardenia World School allows students to engage with learning materials seamlessly.",
+    color: "text-yellow-500",
+    borderColor: "before:bg-yellow-500",
   },
   {
-    title: 'State-of-the-Art Facilities',
+    title: "State-of-the-Art Facilities",
     description:
       "While specific facilities may vary, schools like Gardenia often feature modern infrastructure, including well-equipped classrooms, libraries, and playgrounds. However, it's best to confirm specific facilities with Gardenia World School directly.",
-    color: 'text-purple-500',
-    borderColor: 'before:bg-purple-500',
+    color: "text-purple-500",
+    borderColor: "before:bg-purple-500",
   },
   {
-    title: 'Experienced Faculty',
+    title: "Experienced Faculty",
     description:
-      'The school has a team of dedicated and experienced teachers who are passionate about providing quality education. They work closely with students to ensure they receive the support they need to excel academically and personally.',
-    color: 'text-orange-500',
-    borderColor: 'before:bg-orange-500',
+      "The school has a team of dedicated and experienced teachers who are passionate about providing quality education. They work closely with students to ensure they receive the support they need to excel academically and personally.",
+    color: "text-orange-500",
+    borderColor: "before:bg-orange-500",
   },
 ];
 
@@ -76,7 +76,7 @@ function Home() {
           />
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
             Nurturing <span className="text-blue-primary">Minds</span>,<br />
-            Shaping <span className="text-green-primary">Futures</span>
+            Shaping <span className="text-green-primary">Futures</span>.
           </h1>
           <p className="md:text-lg xl:text-xl">
             At Gardenia World School, we provide quality education for students
@@ -92,8 +92,8 @@ function Home() {
               icon={<YoutubeOutlined />}
               onClick={() =>
                 window.open(
-                  'https://www.youtube.com/@Gardenia_World_School',
-                  '_blank'
+                  "https://www.youtube.com/@Gardenia_World_School",
+                  "_blank"
                 )
               }
             >
