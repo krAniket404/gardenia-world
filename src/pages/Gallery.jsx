@@ -1,48 +1,68 @@
-import React from 'react';
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { CloseOutlined } from '@ant-design/icons';
+import React from "react";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { CloseOutlined } from "@ant-design/icons";
+import img_1 from "../assets/gallery/1.jpeg";
+import img_2 from "../assets/gallery/2.jpeg";
+import img_3 from "../assets/gallery/3.jpeg";
+import img_4 from "../assets/gallery/4.jpeg";
+import img_5 from "../assets/gallery/5.jpeg";
+import img_6 from "../assets/gallery/6.jpeg";
+import img_7 from "../assets/gallery/7.jpeg";
+import img_8 from "../assets/gallery/8.jpeg";
+import img_9 from "../assets/gallery/9.jpeg";
+import img_10 from "../assets/gallery/10.jpeg";
 
 const IMAGES = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Image 1',
+    src: img_1,
+    alt: "Image 1",
   },
   {
     id: 2,
-    src: 'https://plus.unsplash.com/premium_photo-1663126319781-f4de55c7ebd4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Image 2',
+    src: img_2,
+    alt: "Image 2",
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1639548538099-6f7f9aec3b92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2xhc3Nyb29tfGVufDB8fDB8fHww',
-    alt: 'Image 3',
+    src: img_3,
+    alt: "Image 3",
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNsYXNzcm9vbXxlbnwwfHwwfHx8MA%3D%3D',
-    alt: 'Image 4',
+    src: img_4,
+    alt: "Image 4",
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1621354598022-16599af1b8b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Image 5',
+    src: img_5,
+    alt: "Image 5",
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Image 6',
+    src: img_6,
+    alt: "Image 6",
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1613950190144-4f2a84c75e8c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Image 7',
+    src: img_7,
+    alt: "Image 7",
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1718207345122-46b342dadea1?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Image 8',
+    src: img_8,
+    alt: "Image 8",
+  },
+  {
+    id: 9,
+    src: img_9,
+    alt: "Image 9",
+  },
+  {
+    id: 10,
+    src: img_10,
+    alt: "Image 10",
   },
 ];
 
@@ -54,7 +74,7 @@ const Gallery = () => {
   };
 
   const handleCloseModal = (e) => {
-    if (e.target.tagName !== 'IMG') {
+    if (e.target.tagName !== "IMG") {
       setSelectedImage(null);
     }
   };
