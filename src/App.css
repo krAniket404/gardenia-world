@@ -33,8 +33,9 @@ body {
 
 .input {
   /* font-primary border rounded-lg border-black/15 bg-white px-6 py-4 outline-none */
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   border: 1px solid #00000015;
   background: white;
   border-radius: 0.5rem;

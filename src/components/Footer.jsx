@@ -74,6 +74,14 @@ const Footer = () => {
               PACE Tower, Near Metro Pillar No 31, 90 feet road, Kankarbagh,
               Patna-800020
             </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.5317997253633!2d85.1573166!3d25.5872392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed59c445a630af%3A0xb950d4b368e2aa4d!2sGardenia%20World%20School!5e0!3m2!1sen!2sin!4v1769443062728!5m2!1sen!2sin"
+              width="100%"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0 }}
+            ></iframe>
             <p className="text-xl">
               <CaretRightOutlined />
               Campus
