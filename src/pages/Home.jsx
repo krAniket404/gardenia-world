@@ -80,8 +80,8 @@ function Home() {
           </h1>
           <p className="md:text-lg xl:text-xl">
             At Gardenia World School, we provide quality education for students
-            upto Class 5, fostering academic excellence and holistic development
-            in a nurturing environment.
+            from Play Group to Class 5, fostering academic excellence and
+            holistic development in a nurturing environment.
           </p>
           <div className="flex gap-4 flex-col sm:flex-row">
             <Button variant="primary" icon={<UsergroupAddOutlined />}>
@@ -93,7 +93,7 @@ function Home() {
               onClick={() =>
                 window.open(
                   "https://www.youtube.com/@Gardenia_World_School",
-                  "_blank"
+                  "_blank",
                 )
               }
             >
