@@ -81,7 +81,7 @@ const Gallery = () => {
 
   return (
     <>
-      <main className="container mx-auto px-10 md:px-0 flex gap-20 flex-col mt-40 mb-20">
+      <main className="container mx-auto px-10 md:px-8 flex gap-20 flex-col mt-40 mb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {IMAGES.map((image) => (
             <div key={image.id} className="w-full h-auto">

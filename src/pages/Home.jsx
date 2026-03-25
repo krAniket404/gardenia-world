@@ -67,7 +67,7 @@ const specials = [
 function Home() {
   return (
     <>
-      <div className="relative mt-30 lg:mt-0 lg:h-[80vh] xl:h-screen flex flex-col lg:flex-row items-center lg:justify-center container mx-auto gap-8 px-4 lg:px-8 xl:px-0">
+      <div className="relative mt-30 lg:mt-0 lg:h-[80vh] xl:h-screen flex flex-col lg:flex-row items-center lg:justify-center container mx-auto gap-8 px-4 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-1 relative items-center text-center lg:text-left lg:items-start">
           <img
             src={pattern}
@@ -137,7 +137,7 @@ function Home() {
           Our school prepares students to face the challenges of the world and
           life, while celebrating diversity and promoting inclusivity.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 px-4 lg:px-8 xl:px-0 container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 px-4 lg:px-8 xl:px-8 container mx-auto">
           {specials.map((special, index) => (
             <div
               key={index}
